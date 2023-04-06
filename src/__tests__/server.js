@@ -17,56 +17,72 @@ server.get('/failed', (req, res) => {
   res.failed('Hello world, test cases are running now');
 });
 
-// server.post('/create', (req, res) => {
-//   res.respondCreated(null, 'Resource created');
-// });
+server.post('/created', (req, res) => {
+  res.created('Hello world, test cases are running now');
+});
 
-// server.post('/bad-request', (req, res) => {
-//   res.fail('Bad request');
-// });
+server.post('/noContent', (req, res) => {
+  res.noContent('Hello world, test cases are running now');
+});
 
-// server.delete('/delete', (req, res) => {
-//   res.respondDeleted(null, 'Resource deleted');
-// });
+server.post('/unauthorized', (req, res) => {
+  res.unauthorized('Hello world, test cases are running now');
+});
 
-// server.put('/update', (req, res) => {
-//   res.respondUpdated(null, 'Resource updated');
-// });
+server.get('/forbidden', (req, res) => {
+  res.forbidden('Hello world, test cases are running now');
+});
 
-// server.put('/no-content', (req, res) => {
-//   res.respondNoContent('No Content');
-// });
+server.get('/notFound', (req, res) => {
+  res.notFound('Hello world, test cases are running now');
+});
 
-// server.get('/unauthorized', (req, res) => {
-//   res.failUnauthorized();
-// });
+server.get('/notAllowed', (req, res) => {
+  res.notAllowed('Hello world, test cases are running now');
+});
 
-// server.get('/forbidden', (req, res) => {
-//   res.failForbidden();
-// });
+server.post('/notAcceptable', (req, res) => {
+  res.notAcceptable('Hello world, test cases are running now');
+});
 
-// server.get('/not-found', (req, res) => {
-//   res.failNotFound();
-// });
+server.get('/unauthorizedProxy', (req, res) => {
+  res.unauthorizedProxy('Hello world, test cases are running now');
+});
 
-// server.post('/validation-error', (req, res) => {
-//   res.failValidationError(['Error 1', 'Error 2', 'Error 3']);
-// });
+server.get('/requestTimeout', (req, res) => {
+  res.requestTimeout('Hello world, test cases are running now');
+});
 
-// server.post('/conflict', (req, res) => {
-//   res.failResourceExists();
-// });
+server.post('/conflict', (req, res) => {
+  res.conflict('Hello world, test cases are running now');
+});
 
-// server.get('/gone', (req, res) => {
-//   res.failResourceGone();
-// });
+server.post('/invalid', (req, res) => {
+  res.invalid('Hello world, test cases are running now');
+});
 
-// server.get('/overload', (req, res) => {
-//   res.failTooManyRequests();
-// });
+server.get('/serverError', (req, res) => {
+  res.serverError('Hello world, test cases are running now');
+});
 
-// server.post('/server-error', (req, res) => {
-//   res.failServerError();
-// });
+server.get('/notImplemented', (req, res) => {
+  res.notImplemented('Hello world, test cases are running now');
+});
+
+server.get('/badGateway', (req, res) => {
+  res.badGateway('Hello world, test cases are running now');
+});
+
+server.get('/unavailable', (req, res) => {
+  res.unavailable('Hello world, test cases are running now');
+});
+
+server.get('/gatewayTimeout', (req, res) => {
+  res.gatewayTimeout('Hello world, test cases are running now');
+});
+
+server.get('/notSupported', (req, res) => {
+  res.notSupported('Hello world, test cases are running now');
+});
 
 module.exports = server.listen(3000);

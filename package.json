@@ -1,6 +1,6 @@
 {
   "name": "express-response-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimalist package for response helper in Express.js application",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

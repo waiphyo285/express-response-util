@@ -32,6 +32,28 @@ The module provides a middleware function `responseUtils` that can be used in yo
 - status: The optional HTTP code must be either a number or a string. (Default - 400)
 - message: The optional message must be a string or an array of strings. (Default - Bad Request)
 
+The remaining utility methods have been implemented as outlined in the table below.
+
+| Method            | Param | HTTP Status Code |
+| ----------------- | ----- | ---------------- |
+| created           | data  | 201              |
+| noContent         | data  | 204              |
+| unauthorized      | error | 401              |
+| forbidden         | error | 403              |
+| notFound          | error | 404              |
+| notAllowed        | error | 405              |
+| notAcceptable     | error | 406              |
+| unauthorizedProxy | error | 407              |
+| requestTimeout    | error | 408              |
+| conflict          | error | 409              |
+| invalid           | error | 422              |
+| serverError       | error | 500              |
+| notImplemented    | error | 501              |
+| badGateway        | error | 502              |
+| unavailable       | error | 503              |
+| gatewayTimeout    | error | 504              |
+| notSupported      | error | 505              |
+
 ## Examples
 
 You can easily attach the middleware function to your Express object or an Express route. The following property is the one you'll frequently use:
